@@ -1,5 +1,7 @@
 # Stock Market and Cypto Dashboard
 
+![image1](https://user-images.githubusercontent.com/83783825/117729690-e1e54380-b1f3-11eb-8b9c-44df6a89fd33.jpg)
+
 ## Introducere
 
 Aplicația creată este o aplicație web dezvoltată sub forma unui dashboard, ce are ca scop facilitarea găsirii informațiilor despre US stock market și cryptomonede, în vederea analizării ulterioare a evoluției anumitor acțiuni.
