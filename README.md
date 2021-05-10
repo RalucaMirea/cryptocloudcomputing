@@ -1,6 +1,6 @@
 # Stock Market and Cypto Dashboard
 
-![image1](https://user-images.githubusercontent.com/83783825/117729690-e1e54380-b1f3-11eb-8b9c-44df6a89fd33.jpg)
+![image1 1](https://user-images.githubusercontent.com/83783825/117729933-3ee0f980-b1f4-11eb-9197-5b6b81d3c107.jpg)
 
 ## Introducere
 
