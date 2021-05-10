@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Stock Market and Cypto Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introducere
 
-## Available Scripts
+Aplicația creată este o aplicație web dezvoltată sub forma unui dashboard, ce are ca scop facilitarea găsirii informațiilor despre US stock market și cryptomonede, în vederea analizării ulterioare a evoluției anumitor acțiuni.
 
-In the project directory, you can run:
+Notă: Înainte de a continua prezentarea aplicației trebuie menționate câteva lucruri despre CORS și cum acesta împiedică API-ul legat de Cryptomonede să funcționeze în AWS. Requestul care se realizează este către un endpoint (în cazul de față către API-ul de Cryptomonede) care nu permite accesarea acestuia în alt browser. Pentru folosirea acestuia și în AWS erau nevoie de aprobări din partea celor de la nomics.com, însă pentru a nu întâmpina dificultăți, am ales să hostez aplicația fără aprobare, dezvoltarea acesteia fiind prezentată în video cu precădere pe localhost.
 
-### `npm start`
+Rularea aplicației pe localhost funcționează conform așeptărilor, pentru că acesta este whitelisted pentru endpointul menționat anterior.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Descrierea problemei
+Aplicația creată își propune să faciliteze accesul la ultimele noutăți cu privire la bursa americană care are un autocomplete cu simboluri, oferind de asemenea posibilitatea urmăririi îndeaproape a top 15 cryptomonede.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Pentru a prezenta utilitatea practică a aplicației create voi prezenta în continuare motivele pentru care am ales crearea dashboardului în această formă și cum poate fi utilizată.
 
-### `npm test`
+Cum bursa de valori americană se bucură de un mare interes și o mare atenție din partea investitorilor din lumea întreagă, deoarece listează cele mai importante companii americane cu cea mai mare capitalizare și numeroase companii globale, am încercat ca prin aplicația creată să facilitez urmărirea știrilor din ultimele 5 zile legate de anumite burse. Astfel, filtrarea conținutului se realizează prin alegerea dintr-un dropdown a unui simbol, iar după selectarea acestuia, vor apărea știrile din ultimele 5 zile pentru acțiunea selectată.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ De asemenea, piața bursieră se referă la piețele publice care există pentru emiterea, cumpărarea și vânzarea acțiunilor care se tranzacționează la bursă. Acțiunile reprezintă proprietatea fracțională într-o companie, iar piața de valori este un loc în care investitorii pot cumpăra și vinde proprietatea asupra acestor active investibile. O piață de valori care funcționează eficient este considerată critică pentru dezvoltarea economică, deoarece oferă companiilor capacitatea de a accesa rapid capitalul publicului. Datorită interesului mare pentru acestea și evoluția cryptomonedelor, am ales să facilitez urmarirea acestora prin implementarea API-ului care prezintă top 15 cryptomonede.
 
-### `npm run build`
+## Descrierea API-uri
+Stock Symbol este un API utilizat pentru furnizarea simbolurilor referitoare la acțiunile de la bursa din America.
+Cryptocurrency&Bitcoin este un API utilizat pentru prezentarea top 15 cryptomonede.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Flux de date
+În momentul în care utilizatorul accesează pagina de destinație, va apărea direct ecranul în care urmează să fie prezentate informațiile dorite. În partea dreaptă a ecranului avem deja Top 15 cryptomonede, acesta fiind niște informații statice, iar în partea stângă avem un buton de search intitualt Symbol Name. Acesta este un buton de tip drop-down, în care apar simbolurile tuturor acțiunilor de la bursa din America. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+În momentul în care utilizatorul alege simbolul dorit se vor preîncărca toate știrile din ultimele 5 zile, care au legătură cu acțiunea aleasă și vor fi afșate titlurile acestor articole. De asemenea, pentru a oferi și mai multe informații, utilizatorul are posibilitatea de a citi articolul respectiv din tabul More information, fiind redireționat așadar către site-ul articolului selectat.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
