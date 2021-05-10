@@ -109,7 +109,7 @@ class News extends React.Component
                         target="_blank"
                         href={item.url}
                       >
-                        More informations
+                        More information
                       </Button>
                     </TableCell>
                   </TableRow>
