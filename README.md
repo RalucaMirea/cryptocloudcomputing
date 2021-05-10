@@ -26,7 +26,17 @@ Cryptocurrency&Bitcoin este un API utilizat pentru prezentarea top 15 cryptomone
 ## Flux de date
 În momentul în care utilizatorul accesează pagina de destinație, va apărea direct ecranul în care urmează să fie prezentate informațiile dorite. În partea dreaptă a ecranului avem deja Top 15 cryptomonede, acesta fiind niște informații statice, iar în partea stângă avem un buton de search intitualt Symbol Name. Acesta este un buton de tip drop-down, în care apar simbolurile tuturor acțiunilor de la bursa din America. 
 
-În momentul în care utilizatorul alege simbolul dorit se vor preîncărca toate știrile din ultimele 5 zile, care au legătură cu acțiunea aleasă și vor fi afșate titlurile acestor articole. De asemenea, pentru a oferi și mai multe informații, utilizatorul are posibilitatea de a citi articolul respectiv din tabul More information, fiind redireționat așadar către site-ul articolului selectat.
+În momentul în care utilizatorul alege simbolul dorit se vor preîncărca toate știrile din ultimele 5 zile, care au legătură cu acțiunea aleasă și vor fi afișate titlurile acestor articole. De asemenea, pentru a oferi și mai multe informații, utilizatorul are posibilitatea de a accesa articolul respectiv din tabul More information, fiind redireționat așadar către site-ul articolului selectat.
+
+## Preluarea datelor de la ambele API-uri se face în felul urmator:
+- Stock Market API
+
+![image2](https://user-images.githubusercontent.com/83783825/117731468-d7787900-b1f6-11eb-99a1-de63c8914463.PNG)
+
+- Cryptocurrency API
+
+![image3](https://user-images.githubusercontent.com/83783825/117731471-db0c0000-b1f6-11eb-967a-a8dff6784c0f.PNG)
+
 
 
 
