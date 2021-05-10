@@ -49,5 +49,12 @@ Cryptocurrency&Bitcoin este un API utilizat pentru prezentarea top 15 cryptomone
 
 Response-ul primit de la request conține toate monedele existente, însă pentru expunerea datelor într-un format simplu și ușor de citit, am ales să sortez monedele și să fie salvate numai primele 15 în vectorul care este afișat mai sus.
 
+- De asemenea, titlul este unul dinamic și așa cum am făcut mai sus la API-ul precedent și aici requestul folosit poate returna un alt parametru dat, în cazul de față un alt top. În continuare am înlocuit 15 cu 10 în listă și am obținut următorul rezultat:
+
+![image7](https://user-images.githubusercontent.com/83783825/117738293-5e801e00-b204-11eb-8672-b34c24341a0f.PNG)
+
+
+
+
 
 
