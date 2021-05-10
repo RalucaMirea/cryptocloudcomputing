@@ -39,7 +39,7 @@ class CryptoDetails extends React.Component
     {
         return (
             <React.Fragment>
-            <p>------------ Top 15 crypto moneds ------------</p>
+            <p>------------ Top {this.state.cryptoTopLst.length} crypto moneds ------------</p>
             {
                 this.state.cryptoTopLst != null &&
                 <TableContainer component={Paper}>
