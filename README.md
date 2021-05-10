@@ -21,6 +21,7 @@ Cum bursa de valori americană se bucură de un mare interes și o mare atenție
 
 ## Descrierea API-uri
 Stock Symbol este un API utilizat pentru furnizarea simbolurilor referitoare la acțiunile de la bursa din America.
+
 Cryptocurrency&Bitcoin este un API utilizat pentru prezentarea top 15 cryptomonede.
 
 ## Flux de date
@@ -28,16 +29,25 @@ Cryptocurrency&Bitcoin este un API utilizat pentru prezentarea top 15 cryptomone
 
 În momentul în care utilizatorul alege simbolul dorit se vor preîncărca toate știrile din ultimele 5 zile, care au legătură cu acțiunea aleasă și vor fi afișate titlurile acestor articole. De asemenea, pentru a oferi și mai multe informații, utilizatorul are posibilitatea de a accesa articolul respectiv din tabul More information, fiind redireționat așadar către site-ul articolului selectat.
 
-## Preluarea datelor de la ambele API-uri se face în felul urmator:
-- Stock Market API
+# Preluarea datelor de la ambele API-uri
+- Stock Market API - am ales acțiunile de la bursa din America mai jos
 
 ![image2](https://user-images.githubusercontent.com/83783825/117731468-d7787900-b1f6-11eb-99a1-de63c8914463.PNG)
+
+În cadrul acestei funcții putem face foarte ușor modificări, requestul folosit putând returna și un alt parametru dat după cum este prezentat mai jos:
+- Am modificat US (US exchages(NYSE, Nasdaq)), din cadrul requestului, cu HE (NASDAQ OMX HELSINKI LTD) 
+
+![image4](https://user-images.githubusercontent.com/83783825/117735338-ed3d6c80-b1fd-11eb-96bd-3a5b2d8a7725.PNG)
+
+- Am salvat, iar response-ul a fost urmatorul:
+![image6](https://user-images.githubusercontent.com/83783825/117735943-36da8700-b1ff-11eb-8c85-70e3dd5e168b.PNG)
+![image5](https://user-images.githubusercontent.com/83783825/117735949-39d57780-b1ff-11eb-9ab6-4f0a939b8e32.PNG)
 
 - Cryptocurrency API
 
 ![image3](https://user-images.githubusercontent.com/83783825/117731471-db0c0000-b1f6-11eb-967a-a8dff6784c0f.PNG)
 
-
+Response-ul primit de la request conține toate monedele existente, însă pentru expunerea datelor într-un format simplu și ușor de citit, am ales să sortez monedele și să fie salvate numai primele 15 în vectorul care este afișat mai sus.
 
 
 
