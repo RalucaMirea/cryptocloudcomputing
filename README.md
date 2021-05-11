@@ -17,7 +17,7 @@ Pentru a prezenta utilitatea practică a aplicației create voi prezenta în con
 
 Cum bursa de valori americană se bucură de un mare interes și o mare atenție din partea investitorilor din lumea întreagă, deoarece listează cele mai importante companii americane cu cea mai mare capitalizare și numeroase companii globale, am încercat ca prin aplicația creată să facilitez urmărirea știrilor din ultimele 5 zile legate de anumite burse. Astfel, filtrarea conținutului se realizează prin alegerea dintr-un dropdown a unui simbol, iar după selectarea acestuia, vor apărea știrile din ultimele 5 zile pentru acțiunea selectată.
 
- De asemenea, piața bursieră se referă la piețele publice care există pentru emiterea, cumpărarea și vânzarea acțiunilor care se tranzacționează la bursă. Acțiunile reprezintă proprietatea fracțională într-o companie, iar piața de valori este un loc în care investitorii pot cumpăra și vinde proprietatea asupra acestor active investibile. O piață de valori care funcționează eficient este considerată critică pentru dezvoltarea economică, deoarece oferă companiilor capacitatea de a accesa rapid capitalul publicului. Datorită interesului mare pentru acestea și evoluția cryptomonedelor, am ales să facilitez urmarirea acestora prin implementarea API-ului care prezintă top 15 cryptomonede.
+De asemenea, cum primele 2 instrumente financiare din prezent sunt acțiunile si cryptomonedele, am ales să analizez și modulul de cryptomonede pentru a facilita accesul la informații. Monedele sunt din ce în ce mai multe și având în vedere frecvența cu care apar, am dorit să afișez un top cu cele mai valoroase dintre acestea.
 
 ## Descrierea API-uri
 Stock Symbol este un API utilizat pentru furnizarea simbolurilor referitoare la acțiunile de la bursa din America.
@@ -30,7 +30,9 @@ Cryptocurrency&Bitcoin este un API utilizat pentru prezentarea top 15 cryptomone
 În momentul în care utilizatorul alege simbolul dorit se vor preîncărca toate știrile din ultimele 5 zile, care au legătură cu acțiunea aleasă și vor fi afișate titlurile acestor articole. De asemenea, pentru a oferi și mai multe informații, utilizatorul are posibilitatea de a accesa articolul respectiv din tabul More information, fiind redireționat așadar către site-ul articolului selectat.
 
 # Preluarea datelor de la ambele API-uri
-- Stock Market API - am ales acțiunile de la bursa din America mai jos
+În momentul în care utilizatorul intră pe aplicație se iau toate simbolurile și topul de crypto și când utilizatorul alege un simbol se face requestul către știri și se populează tabelul. În momentul în care utilizatorul schimbă simbolul, se reface procesul și se genereaza știrile pentru noul simbol ales.
+
+- Stock Market API - are foarte multe endpointuri difrite. Cel pe care l-am folost este cel de News și are nevoie de parametrii în URL simbolurile acțiunii și data de start și de final care să caute știri. Acest API întoarce știri care au un headline și un link folosite în tabel. Am ales acțiunile de la bursa din America mai jos
 
 ![image2](https://user-images.githubusercontent.com/83783825/117731468-d7787900-b1f6-11eb-99a1-de63c8914463.PNG)
 
