@@ -55,7 +55,8 @@ Response-ul primit de la request conține toate monedele existente, însă pentr
 
 ![image7](https://user-images.githubusercontent.com/83783825/117738293-5e801e00-b204-11eb-8672-b34c24341a0f.PNG)
 
-##Publicarea aplicației
+## Publicarea aplicației
+
 Aplicația a fost aplicată folosind Amazon Web Service și poate fi accesată aici: http://stockmarketcloudcomputing.s3-website.eu-central-1.amazonaws.com/
 
 
