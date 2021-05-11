@@ -20,19 +20,19 @@ Cum bursa de valori americană se bucură de un mare interes și o mare atenție
 De asemenea, cum primele 2 instrumente financiare din prezent sunt acțiunile si cryptomonedele, am ales să analizez și modulul de cryptomonede pentru a facilita accesul la informații. Monedele sunt din ce în ce mai multe și având în vedere frecvența cu care apar, am dorit să afișez un top cu cele mai valoroase dintre acestea.
 
 ## Descrierea API-uri
-Stock Symbol este un API utilizat pentru furnizarea simbolurilor referitoare la acțiunile de la bursa din America.
+Stock Symbol este un API utilizat pentru furnizarea simbolurilor referitoare la acțiunile de la bursa din America. - https://finnhub.io/
 
-Cryptocurrency&Bitcoin este un API utilizat pentru prezentarea top 15 cryptomonede.
+Cryptocurrency&Bitcoin este un API utilizat pentru prezentarea top 15 cryptomonede. - https://nomics.com/docs/
 
 ## Flux de date
-În momentul în care utilizatorul accesează pagina de destinație, va apărea direct ecranul în care urmează să fie prezentate informațiile dorite. În partea dreaptă a ecranului avem deja Top 15 cryptomonede, acesta fiind niște informații statice, iar în partea stângă avem un buton de search intitualt Symbol Name. Acesta este un buton de tip drop-down, în care apar simbolurile tuturor acțiunilor de la bursa din America. 
+În momentul în care utilizatorul accesează pagina de destinație, va apărea direct ecranul în care urmează să fie prezentate informațiile dorite. În partea dreaptă a ecranului avem deja Top 15 cryptomonede, acesta fiind niște informații statice, iar în partea stângă avem un buton de search intitualt Symbol Name. Acesta este un buton de tip drop-down, în care apar simbolurile tuturor acțiunilor de la bursa din America. Pentru ca nu am vrut să mă limitez la anumite acțiuni, API ul folosit conține toate simbolurile acțiunilor de la bursa din America în număr de 25000. 
 
 În momentul în care utilizatorul alege simbolul dorit se vor preîncărca toate știrile din ultimele 5 zile, care au legătură cu acțiunea aleasă și vor fi afișate titlurile acestor articole. De asemenea, pentru a oferi și mai multe informații, utilizatorul are posibilitatea de a accesa articolul respectiv din tabul More information, fiind redireționat așadar către site-ul articolului selectat.
 
 # Preluarea datelor de la ambele API-uri
-În momentul în care utilizatorul intră pe aplicație se iau toate simbolurile și topul de crypto și când utilizatorul alege un simbol se face requestul către știri și se populează tabelul. În momentul în care utilizatorul schimbă simbolul, se reface procesul și se genereaza știrile pentru noul simbol ales.
+În momentul în care utilizatorul intră pe aplicație se iau toate simbolurile și topul de cryptomonede și când utilizatorul alege un simbol se face requestul către știri și se populează tabelul. În momentul în care utilizatorul schimbă simbolul, se reface procesul și se genereaza știrile pentru noul simbol ales.
 
-- Stock Market API - are foarte multe endpointuri difrite. Cel pe care l-am folost este cel de News și are nevoie de parametrii în URL simbolurile acțiunii și data de start și de final care să caute știri. Acest API întoarce știri care au un headline și un link folosite în tabel. Am ales acțiunile de la bursa din America mai jos
+- Stock Market API - are foarte multe endpointuri difrite. Cel pe care l-am folost este cel de News și are nevoie de parametri în URL cu simbolurile acțiunii și data de start și de final care să caute știri. Acest API întoarce știri care au un headline și un link folosite în tabel. Am ales acțiunile de la bursa din America după cum se poate observa mai jos:
 
 ![image2](https://user-images.githubusercontent.com/83783825/117731468-d7787900-b1f6-11eb-99a1-de63c8914463.PNG)
 
@@ -55,6 +55,8 @@ Response-ul primit de la request conține toate monedele existente, însă pentr
 
 ![image7](https://user-images.githubusercontent.com/83783825/117738293-5e801e00-b204-11eb-8672-b34c24341a0f.PNG)
 
+##Publicarea aplicației
+Aplicația a fost aplicată folosind Amazon Web Service și poate fi accesată aici: http://stockmarketcloudcomputing.s3-website.eu-central-1.amazonaws.com/
 
 
 
